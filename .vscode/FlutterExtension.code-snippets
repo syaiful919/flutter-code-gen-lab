@@ -1,0 +1,111 @@
+{
+	// Place your lab workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"Hello world": {
+		"description": "insert hello world",
+		"scope": "dart",
+		"prefix": "hw",
+		"body": [
+			"hello world"
+		]
+	},
+	"Clean App": {
+		"description": "insert clean flutter app",
+		"scope": "dart",
+		"prefix": "clnapp",
+		"body": [
+			"import 'package:flutter/material.dart';",
+			"",
+			"void main() {",
+			"  runApp(const MyApp());",
+			"}",
+			"",
+			"class MyApp extends StatelessWidget {",
+			"  const MyApp({Key? key}) : super(key: key);",
+			"",
+			"  @override",
+			"  Widget build(BuildContext context) {",
+			"    return const MaterialApp(",
+			"      home: HomePage(),",
+			"    );",
+			"  }",
+			"}",
+			"",
+			"class HomePage extends StatelessWidget {",
+			"  const HomePage({Key? key}) : super(key: key);",
+			"",
+			"  @override",
+			"  Widget build(BuildContext context) {",
+			"    return Scaffold(",
+			"      body: Container(),",
+			"    );",
+			"  }",
+			"}",
+		]
+	},
+	"Blank Page": {
+		"description": "insert blank page using stateless widget",
+		"scope": "dart",
+		"prefix": "pgbnk",
+		"body": [
+			"import 'package:flutter/material.dart';",
+			"",
+			"class $0Page extends StatelessWidget {",
+			"  const $0Page({Key? key}) : super(key: key);",
+			"",
+			"  @override",
+			"  Widget build(BuildContext context) {",
+			"    return Scaffold(",
+			"      body: Container(),",
+			"    );",
+			"  }",
+			"}",
+		]
+	},
+	"Blank Page with AppBar": {
+		"description": "insert blank page with appbar using stateless widget",
+		"scope": "dart",
+		"prefix": "pgabnk",
+		"body": [
+			"import 'package:flutter/material.dart';",
+			"",
+			"class $1Page extends StatelessWidget {",
+			"  const $1Page({Key? key}) : super(key: key);",
+			"",
+			"  @override",
+			"  Widget build(BuildContext context) {",
+			"    return Scaffold(",
+			"      appBar: AppBar(title: const Text('$0')),",
+			"      body: Container(),",
+			"    );",
+			"  }",
+			"}",
+		]
+	},
+	"Column Widget": {
+		"description": "insert Column widget",
+		"scope": "dart",
+		"prefix": "clm",
+		"body": [
+			"Column(",
+			"  mainAxisAlignment: ${1:main},",
+			"  crossAxisAlignment: ${2:cross},",
+			"  children: [$0],",
+			")"
+		]
+	},
+}
