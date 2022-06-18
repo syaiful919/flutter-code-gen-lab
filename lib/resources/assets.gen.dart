@@ -3,7 +3,9 @@
 ///  FlutterGen
 /// *****************************************************
 
-// ignore_for_file: directives_ordering
+// coverage:ignore-file
+// ignore_for_file: type=lint
+// ignore_for_file: directives_ordering,unnecessary_import
 
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -12,18 +14,21 @@ import 'package:flutter/services.dart';
 class $AssetsAudioGen {
   const $AssetsAudioGen();
 
+  /// File path: assets/audio/bgm_main.mp3
   String get bgmMain => 'assets/audio/bgm_main.mp3';
 }
 
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
+  /// File path: assets/icons/ic_close.svg
   SvgGenImage get icClose => const SvgGenImage('assets/icons/ic_close.svg');
 }
 
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
+  /// File path: assets/images/sample.png
   AssetGenImage get sample => const AssetGenImage('assets/images/sample.png');
 }
 
@@ -35,19 +40,23 @@ class Assets {
   static const $AssetsImagesGen images = $AssetsImagesGen();
 }
 
-class AssetGenImage extends AssetImage {
-  const AssetGenImage(String assetName) : super(assetName);
+class AssetGenImage {
+  const AssetGenImage(this._assetName);
+
+  final String _assetName;
 
   Image image({
     Key? key,
+    AssetBundle? bundle,
     ImageFrameBuilder? frameBuilder,
-    ImageLoadingBuilder? loadingBuilder,
     ImageErrorWidgetBuilder? errorBuilder,
     String? semanticLabel,
     bool excludeFromSemantics = false,
+    double? scale,
     double? width,
     double? height,
     Color? color,
+    Animation<double>? opacity,
     BlendMode? colorBlendMode,
     BoxFit? fit,
     AlignmentGeometry alignment = Alignment.center,
@@ -56,19 +65,24 @@ class AssetGenImage extends AssetImage {
     bool matchTextDirection = false,
     bool gaplessPlayback = false,
     bool isAntiAlias = false,
+    String? package,
     FilterQuality filterQuality = FilterQuality.low,
+    int? cacheWidth,
+    int? cacheHeight,
   }) {
-    return Image(
+    return Image.asset(
+      _assetName,
       key: key,
-      image: this,
+      bundle: bundle,
       frameBuilder: frameBuilder,
-      loadingBuilder: loadingBuilder,
       errorBuilder: errorBuilder,
       semanticLabel: semanticLabel,
       excludeFromSemantics: excludeFromSemantics,
+      scale: scale,
       width: width,
       height: height,
       color: color,
+      opacity: opacity,
       colorBlendMode: colorBlendMode,
       fit: fit,
       alignment: alignment,
@@ -77,11 +91,16 @@ class AssetGenImage extends AssetImage {
       matchTextDirection: matchTextDirection,
       gaplessPlayback: gaplessPlayback,
       isAntiAlias: isAntiAlias,
+      package: package,
       filterQuality: filterQuality,
+      cacheWidth: cacheWidth,
+      cacheHeight: cacheHeight,
     );
   }
 
-  String get path => assetName;
+  String get path => _assetName;
+
+  String get keyName => _assetName;
 }
 
 class SvgGenImage {
@@ -105,6 +124,8 @@ class SvgGenImage {
     String? semanticsLabel,
     bool excludeFromSemantics = false,
     Clip clipBehavior = Clip.hardEdge,
+    bool cacheColorFilter = false,
+    SvgTheme? theme,
   }) {
     return SvgPicture.asset(
       _assetName,
@@ -123,6 +144,8 @@ class SvgGenImage {
       semanticsLabel: semanticsLabel,
       excludeFromSemantics: excludeFromSemantics,
       clipBehavior: clipBehavior,
+      cacheColorFilter: cacheColorFilter,
+      theme: theme,
     );
   }
 
