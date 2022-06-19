@@ -22,6 +22,9 @@ dev_dependencies:
   json_serializable: ^6.2.0
   build_runner: ^2.1.11
 
+  apparatus:
+    path: apparatus
+
 flutter_gen:
   output: lib/resources/
 

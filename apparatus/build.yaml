@@ -1,0 +1,15 @@
+builders:
+  info:
+    import: 'package:apparatus/builder.dart'
+    builder_factories: ['infoGeneratorBuilder']
+    auto_apply: dependents
+    build_extensions: {".dart": [".info.part"]}
+    build_to: cache
+    applies_builders: ["source_gen|combining_builder"]
+  class_extras:
+    import: 'package:apparatus/builder.dart'
+    builder_factories: ['classExtrasGeneratorBuilder']
+    auto_apply: dependents
+    build_extensions: {".dart": [".extras.part"]}
+    build_to: cache
+    applies_builders: ["source_gen|combining_builder"]

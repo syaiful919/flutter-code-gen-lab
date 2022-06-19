@@ -1,0 +1,14 @@
+name: apparatus
+description: A sample command-line application.
+version: 1.0.0
+
+environment:
+  sdk: '>=2.17.1 <3.0.0'
+
+dependencies:
+  analyzer: '>=2.1.0 <4.0.0'
+  build: ^2.0.0
+  source_gen: ^1.2.2
+
+dev_dependencies:
+  lints: ^2.0.0

@@ -7,3 +7,7 @@ targets:
           # `@JsonSerializable`-annotated class in the package.
           #
           explicit_to_json: false
+      apparatus|info:
+        # Only run this builder on the specified input.
+        generate_for:
+          - lib/samples/*.dart

@@ -1,0 +1,3 @@
+class ClassExtras {
+  const ClassExtras();
+}
