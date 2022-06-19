@@ -1,0 +1,14 @@
+{
+    "version_name": "1.0.0",
+    "is_breaking": true,
+    "changes": [
+      {
+        "change": "fix feature one",
+        "type": "fix"
+      },
+      {
+        "change": "add feature two",
+        "type": "feat"
+      }
+    ]
+  }

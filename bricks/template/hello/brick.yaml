@@ -1,0 +1,10 @@
+name: hello
+description: generate hello doc.
+version: 0.1.0+1
+
+vars:
+  name:
+    type: string
+    description: name
+    default: user
+    prompt: insert your name

@@ -1,0 +1,20 @@
+name: changelog
+description: generate changelog.
+version: 0.1.0+1
+
+vars:
+  version_name:
+    type: string
+    description: version name
+    default: 1.0.0
+    prompt: What is the version name?
+  is_breaking:
+    type: boolean
+    description: determine wheter the version is breaking changes or not
+    default: true
+    prompt: is breaking changes?
+  changes:
+    type: string
+    description: JSON Array of changes object
+    default: '[{"change": "example", "type": "feat"}]'
+    prompt: put changes list!

@@ -1,0 +1,7 @@
+
+bricks:
+  hello:
+    path: bricks/template/hello
+  changelog:
+    path: bricks/template/changelog
+
